@@ -1,6 +1,10 @@
 # DigitalOcean Dynamic DNS Service
 
-This is a small node application that periodically checks to see if your external IP address has changed, and if so, updates a DNS record on DigitalOcean
+This is a small node application that periodically checks to see if your external IP address has changed, and if so, updates a DNS record on DigitalOcean.
+
+This application uses the [ipify.org API](https://www.ipify.org/) to fetch external IP addresses. They say you can use it as much as you like, but please be kind and refrain from pummelling it.
+
+Also, be aware of [DigitalOcean's API rate-limiting](https://docs.digitalocean.com/reference/api/api-reference/#section/Introduction/Rate-Limit). This application will make a single query for every domain passed in `DO_CHECK_DOMAINS` per cron cycle. If your external IP address and the address at DigitalOcean do no match, it will make another query to update the record.
 
 ## Installation
 
