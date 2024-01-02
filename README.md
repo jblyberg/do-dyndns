@@ -20,6 +20,6 @@ Deploy with image `jblyberg/do-dyndns:latest` and configure with the variables b
 
 ## Environmental Variables
 
-`DO_CRON_EXPRESSION` Optional. Default: `0 */30 * * * *` (30 minutes) Cron expression for how often to check.
-`DO_CHECK_DOMAINS` List of domains to check. Should be space-separated domain/record ID pairs. Example: `mydomain1.com:63546274 mydomain2.com:54726483`
-`DO_API_TOKEN` Digitalocean API token. Needs to have write access.
+- `DO_CRON_EXPRESSION` Optional. Default: `0 */30 * * * *` (30 minutes) Cron expression for how often to check.
+- `DO_CHECK_DOMAINS` List of domains to check. Should be space-separated domain/record ID pairs. Example: `mydomain1.com:63546274 mydomain2.com:54726483`
+- `DO_API_TOKEN` Digitalocean API token. Needs to have write access.
