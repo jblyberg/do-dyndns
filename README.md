@@ -14,6 +14,10 @@ pnpm i
 pnpm start:prod
 ```
 
+### Docker/Kubernetes
+
+Deploy with image `jblyberg/do-dyndns:latest` and configure with the variables below
+
 ## Environmental Variables
 
 `DO_CRON_EXPRESSION` Optional. Default: `0 */30 * * * *` (30 minutes) Cron expression for how often to check.

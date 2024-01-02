@@ -21,7 +21,7 @@ RUN addgroup --system --gid 1001 dyndns
 RUN adduser --system --uid 1001 dyndns
 
 # Copy Source
-COPY --chown=dyndns:dyndns package.json tsconfig.json tsconfig.build.json pnpm-lock.yaml .npmrc ./
+COPY --chown=dyndns:dyndns package.json tsconfig.json tsconfig.build.json pnpm-lock.yaml ./
 COPY --chown=dyndns:dyndns src/ src/
 
 # Install dependencies
