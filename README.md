@@ -1,6 +1,6 @@
 # DigitalOcean Dynamic DNS Service
 
-This is a small node application that periodically checks to see if your external IP address has changed, and if so, updates a DNS record on DigitalOcean.
+This is a small node application that periodically checks to see if your external IP address has changed, and if so, updates a DNS record on DigitalOcean. DynDNS services are stupid expensive for what they do. DigitalOcean's domain service is free (for now) and fairly painless to use.
 
 This application uses the [ipify.org API](https://www.ipify.org/) to fetch external IP addresses. They say you can use it as much as you like, but please be kind and refrain from pummelling it.
 
