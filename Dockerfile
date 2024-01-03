@@ -51,4 +51,4 @@ COPY --chown=dyndns:dyndns --from=builder /app/package.json package.json
 # Set Docker as non-root user
 USER dyndns
 
-CMD ["npm", "run", "start:prod"]
+CMD ["node", "dist/main"]
