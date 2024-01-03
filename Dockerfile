@@ -1,17 +1,13 @@
 # To build and publish:
-# docker build --platform linux/amd64 -t jblyberg/do-dyndns -t jblyberg/do-dyndns:1.0 .
+# https://www.docker.com/blog/multi-arch-images/
+# docker buildx build --platform linux/amd64,linux/arm64,linux/arm/v7,linux/arm/v6 -t jblyberg/do-dyndns -t jblyberg/do-dyndns:1.0 --push .
 
-# On M1/2 Mac:
-# docker buildx build --platform linux/amd64 --output type=docker -t jblyberg/do-dyndns -t jblyberg/do-dyndns:1.0 .
-
-# To Push:
-# docker push jblyberg/do-dyndns; docker push jblyberg/do-dyndns:1.0
 
 #
 # 🏡 Build
 #
 
-FROM node:20-alpine as builder
+FROM node:18-alpine as builder
 
 WORKDIR /app
 RUN corepack enable && corepack prepare pnpm@latest --activate
@@ -37,7 +33,7 @@ USER dyndns
 # 🚀 Production
 #
 
-FROM node:20-alpine as production
+FROM node:18-alpine as production
 
 WORKDIR /app
 
