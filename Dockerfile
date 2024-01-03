@@ -1,7 +1,6 @@
 # To build and publish:
 # https://www.docker.com/blog/multi-arch-images/
-# docker buildx build --platform linux/amd64,linux/arm64,linux/arm/v7,linux/arm/v6 -t jblyberg/do-dyndns -t jblyberg/do-dyndns:1.0 --push .
-
+# docker buildx build --platform linux/amd64,linux/arm64,linux/arm/v7,linux/arm/v6 --label "org.opencontainers.image.source=https://github.com/jblyberg/do-dyndns" --label "org.opencontainers.image.description=Dynamic DNS service for DigitalOcean" --label "org.opencontainers.image.licenses=MIT" -t jblyberg/do-dyndns -t jblyberg/do-dyndns:1.0 --push .
 
 #
 # 🏡 Build
